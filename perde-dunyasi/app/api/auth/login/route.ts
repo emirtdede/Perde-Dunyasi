@@ -15,8 +15,16 @@ export async function POST(request: Request) {
     );
   }
 
-  const expectedEmail = process.env.ADMIN_EMAIL ?? "admin@perdedunyasi.com";
-  const expectedPassword = process.env.ADMIN_PASSWORD ?? "perde1234";
+  const expectedEmail = process.env.ADMIN_EMAIL;
+  const expectedPassword = process.env.ADMIN_PASSWORD;
+
+  if (!expectedEmail || !expectedPassword) {
+    console.error("ADMIN_EMAIL or ADMIN_PASSWORD is not set in environment variables.");
+    return NextResponse.json(
+      { error: "Giriş servisi yapılandırılmamış" },
+      { status: 500 },
+    );
+  }
 
   if (body.email !== expectedEmail || body.password !== expectedPassword) {
     return NextResponse.json(

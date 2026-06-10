@@ -79,7 +79,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
 
                 <div className="mt-8 flex flex-wrap gap-3">
                   <span className="rounded-full border border-[var(--card-border)] bg-[var(--card)] px-4 py-2 text-sm text-[var(--foreground)] font-medium">
-                    {product.price ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit}` : "Fiyat için iletişim"}
+                    {product.price ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit} / m²` : "Fiyat için iletişim"}
                   </span>
                   <span className="rounded-full border border-[var(--card-border)] bg-[var(--card)] px-4 py-2 text-sm text-[var(--muted)]">
                     WhatsApp teklif akışı

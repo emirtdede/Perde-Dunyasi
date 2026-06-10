@@ -164,7 +164,7 @@ export default async function Home() {
                       <div className="mt-auto flex items-center justify-between gap-3 pt-4">
                         <span className="text-sm font-medium text-[var(--muted)]">
                           {product.price
-                            ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit}`
+                            ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit} / m²`
                             : "Fiyat için iletişim"}
                         </span>
                         <Link
@@ -216,7 +216,7 @@ export default async function Home() {
                   <div className="mt-auto flex items-center justify-between gap-3 pt-4">
                     <span className="text-sm text-[var(--muted)]">
                       {product.price
-                        ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit}`
+                        ? `${product.price.toLocaleString("tr-TR")} ${product.priceUnit} / m²`
                         : "Fiyat için iletişim"}
                     </span>
                     <Link

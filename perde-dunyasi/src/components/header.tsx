@@ -9,6 +9,7 @@ import { useTheme } from "@/src/components/theme-provider";
 const navItems = [
   { href: "/", label: "Ana Sayfa" },
   { href: "/katalog", label: "Katalog" },
+  { href: "/urunler", label: "Ürünler" },
   { href: "/kampanyalar", label: "Kampanyalar" },
   { href: "/duyurular", label: "Duyurular" },
   { href: "/hakkimizda", label: "Hakkımızda" },

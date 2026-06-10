@@ -9,8 +9,8 @@ export function AdminLoginForm({
   searchParams?: Promise<{ from?: string }>;
 }) {
   const router = useRouter();
-  const [email, setEmail] = useState("admin@perdedunyasi.com");
-  const [password, setPassword] = useState("perde1234");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fromPath, setFromPath] = useState<string>("/admin");
