@@ -121,10 +121,6 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
                   <span className="font-medium text-[var(--foreground)]">Kategori:</span>{" "}
                   {category?.name ?? "-"}
                 </p>
-                <p>
-                  <span className="font-medium text-[var(--foreground)]">Slug:</span>{" "}
-                  {product.slug}
-                </p>
               </div>
             </aside>
           </div>

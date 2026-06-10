@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import type { ProductImage } from "@/src/types";
 
@@ -13,10 +13,26 @@ export function ProductImageGallery({ images = [] }: ProductImageGalleryProps) {
   const initialIndex = primaryIndex !== -1 ? primaryIndex : 0;
   const [activeIdx, setActiveIdx] = useState(initialIndex);
 
-  // If productId changed but indices stayed, make sure to sync active index
-  // We can just rely on the component re-mounting or reset via key, but
-  // safe fallback in case activeIdx gets out of bounds
+  // Sync index if images list changes
   const currentIdx = activeIdx >= images.length ? 0 : activeIdx;
+
+  // Keypress event listener for Left and Right Arrow navigation
+  useEffect(() => {
+    if (images.length <= 1) return;
+
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "ArrowLeft") {
+        setActiveIdx((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+      } else if (e.key === "ArrowRight") {
+        setActiveIdx((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [images]);
 
   if (images.length === 0) {
     return (
@@ -43,9 +59,12 @@ export function ProductImageGallery({ images = [] }: ProductImageGalleryProps) {
 
   const activeImage = images[currentIdx] || images[0];
 
+  const goPrev = () => setActiveIdx((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const goNext = () => setActiveIdx((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+
   return (
     <div className="space-y-4">
-      <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] border border-[var(--card-border)] bg-black/5 dark:bg-white/5 shadow-sm">
+      <div className="group/gallery relative aspect-square w-full overflow-hidden rounded-[2rem] border border-[var(--card-border)] bg-black/5 dark:bg-white/5 shadow-sm">
         <Image
           key={activeImage.id}
           src={activeImage.url}
@@ -56,6 +75,28 @@ export function ProductImageGallery({ images = [] }: ProductImageGalleryProps) {
           className="object-cover transition-all duration-500 animate-fade-in"
           unoptimized
         />
+
+        {/* Hover Arrow Overlay */}
+        {images.length > 1 && (
+          <>
+            <button
+              type="button"
+              onClick={goPrev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 opacity-0 scale-90 group-hover/gallery:opacity-100 group-hover/gallery:scale-100 hover:bg-black/60 shadow-lg"
+              title="Önceki (Sol Yön Tuşu)"
+            >
+              ←
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              className="absolute right-4 top-1/2 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-md transition-all duration-300 opacity-0 scale-90 group-hover/gallery:opacity-100 group-hover/gallery:scale-100 hover:bg-black/60 shadow-lg"
+              title="Sonraki (Sağ Yön Tuşu)"
+            >
+              →
+            </button>
+          </>
+        )}
       </div>
 
       {/* Thumbnails */}
