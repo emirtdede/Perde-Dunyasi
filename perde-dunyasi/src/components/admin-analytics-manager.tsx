@@ -115,44 +115,6 @@ export function AdminAnalyticsManager() {
             </div>
           </div>
 
-          {/* Premium CSS-based Bar Chart */}
-          {data.chartData.length > 0 ? (
-            <div className="rounded-2xl border border-[var(--card-border)] p-6 space-y-4">
-              <div>
-                <h3 className="text-sm font-semibold">Günlük Ziyaret Grafiği</h3>
-                <p className="text-xs text-[var(--muted)] mt-1">
-                  Seçilen tarih aralığındaki günlük toplam sayfa görüntüleme (sütun yüksekliği) ve tekil ziyaretçi sayıları.
-                </p>
-              </div>
-              <div className="h-48 w-full flex items-end justify-between gap-1 pt-6 overflow-x-auto">
-                {data.chartData.map((d, index) => {
-                  const heightPercentage = Math.round((d.pageViews / maxPageViews) * 100);
-                  return (
-                    <div key={`${d.date}-${index}`} className="flex flex-col items-center flex-1 min-w-[20px] group relative h-full justify-end">
-                      {/* Tooltip */}
-                      <div className="absolute bottom-full mb-1 scale-0 group-hover:scale-100 transition origin-bottom bg-slate-950 text-white text-[10px] rounded px-2 py-1 z-10 whitespace-nowrap shadow-lg">
-                        {d.pageViews} Görüntüleme<br/>
-                        {d.uniqueVisitors} Tekil
-                      </div>
-                      {/* Bar */}
-                      <div 
-                        style={{ height: `${heightPercentage}%` }} 
-                        className="w-full bg-[var(--accent)] hover:opacity-85 transition rounded-t-sm"
-                      />
-                      {/* Date label */}
-                      <span className="text-[9px] text-[var(--muted)] mt-2 font-medium transform rotate-45 sm:rotate-0 whitespace-nowrap">
-                        {d.date}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ) : (
-            <div className="rounded-2xl border border-[var(--card-border)] p-8 text-center text-sm text-[var(--muted)]">
-              Bu zaman aralığında henüz veri bulunmamaktadır.
-            </div>
-          )}
 
           {/* Breakdown Tables */}
           <div className="grid gap-6 md:grid-cols-2">
