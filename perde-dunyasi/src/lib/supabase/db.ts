@@ -595,6 +595,7 @@ export async function createProduct(data: Partial<Product>): Promise<Product> {
     try {
       const supabase = createSupabaseServerClient();
       const dbData = {
+        id: data.id || undefined,
         category_id: data.categoryId,
         name: data.name,
         slug: data.slug,
@@ -629,7 +630,7 @@ export async function createProduct(data: Partial<Product>): Promise<Product> {
   }
 
   const newProd: Product = {
-    id: generateUUID(),
+    id: data.id || generateUUID(),
     categoryId: data.categoryId || _db.localCategories[0]?.id || "cat-1",
     name: data.name || "Yeni Ürün",
     slug: data.slug || "yeni-urun",
@@ -1192,6 +1193,8 @@ export async function getAnnouncementById(id: string): Promise<Announcement | nu
         id: data.id,
         title: data.title,
         content: data.content,
+        imageUrl: data.image_url,
+        storagePath: data.storage_path,
         isPublished: data.is_published,
         publishedAt: data.published_at,
         createdAt: data.created_at,
@@ -1213,6 +1216,8 @@ export async function createAnnouncement(data: Partial<Announcement>): Promise<A
       const dbData = {
         title: data.title,
         content: data.content,
+        image_url: data.imageUrl || null,
+        storage_path: data.storagePath || null,
         is_published: data.isPublished === true,
         published_at: data.isPublished ? now : null,
       };
@@ -1222,6 +1227,8 @@ export async function createAnnouncement(data: Partial<Announcement>): Promise<A
         id: inserted.id,
         title: inserted.title,
         content: inserted.content,
+        imageUrl: inserted.image_url,
+        storagePath: inserted.storage_path,
         isPublished: inserted.is_published,
         publishedAt: inserted.published_at,
         createdAt: inserted.created_at,
@@ -1236,6 +1243,8 @@ export async function createAnnouncement(data: Partial<Announcement>): Promise<A
     id: generateUUID(),
     title: data.title || "Yeni Duyuru",
     content: data.content || "",
+    imageUrl: data.imageUrl || null,
+    storagePath: data.storagePath || null,
     isPublished: data.isPublished === true,
     publishedAt: data.isPublished ? now : null,
     createdAt: now,
@@ -1253,6 +1262,8 @@ export async function updateAnnouncement(id: string, data: Partial<Announcement>
       const dbData: Record<string, string | number | boolean | null | undefined> = {};
       if (data.title !== undefined) dbData.title = data.title;
       if (data.content !== undefined) dbData.content = data.content;
+      if (data.imageUrl !== undefined) dbData.image_url = data.imageUrl;
+      if (data.storagePath !== undefined) dbData.storage_path = data.storagePath;
       if (data.isPublished !== undefined) {
         dbData.is_published = data.isPublished;
         if (data.isPublished) {
@@ -1271,6 +1282,8 @@ export async function updateAnnouncement(id: string, data: Partial<Announcement>
         id: updated.id,
         title: updated.title,
         content: updated.content,
+        imageUrl: updated.image_url,
+        storagePath: updated.storage_path,
         isPublished: updated.is_published,
         publishedAt: updated.published_at,
         createdAt: updated.created_at,
@@ -1560,16 +1573,19 @@ export async function getVisitStats(filter: "day" | "month" | "year"): Promise<{
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);
 
-  // Top locations
-  const locationCounts: Record<string, number> = {};
+  // Top locations based on unique visitors
+  const locationUniques: Record<string, Set<string>> = {};
   visitsList.forEach(v => {
     const locKey = `${v.country || "Bilinmiyor"} - ${v.city || "Bilinmiyor"}`;
-    locationCounts[locKey] = (locationCounts[locKey] || 0) + 1;
+    if (!locationUniques[locKey]) {
+      locationUniques[locKey] = new Set();
+    }
+    locationUniques[locKey].add(v.visitor_id);
   });
-  const topLocations = Object.entries(locationCounts)
-    .map(([loc, count]) => {
+  const topLocations = Object.entries(locationUniques)
+    .map(([loc, visitors]) => {
       const parts = loc.split(" - ");
-      return { country: parts[0], city: parts[1], count };
+      return { country: parts[0], city: parts[1], count: visitors.size };
     })
     .sort((a, b) => b.count - a.count)
     .slice(0, 10);

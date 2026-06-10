@@ -67,6 +67,8 @@ CREATE TABLE IF NOT EXISTS announcements (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   title VARCHAR(200) NOT NULL,
   content TEXT NOT NULL,
+  image_url TEXT,
+  storage_path TEXT,
   is_published BOOLEAN DEFAULT false,
   published_at TIMESTAMPTZ,
   created_at TIMESTAMPTZ DEFAULT NOW(),

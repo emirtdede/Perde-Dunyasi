@@ -59,6 +59,8 @@ export type Announcement = {
   id: string;
   title: string;
   content: string;
+  imageUrl?: string | null;
+  storagePath?: string | null;
   isPublished: boolean;
   publishedAt: string | null;
   createdAt: string;

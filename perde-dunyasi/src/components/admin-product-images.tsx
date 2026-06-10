@@ -8,11 +8,13 @@ import type { ProductImage } from "@/src/types";
 type AdminProductImagesProps = {
   productId: string;
   images?: ProductImage[];
+  onImagesChange?: () => void;
 };
 
 export function AdminProductImages({
   productId,
   images = [],
+  onImagesChange,
 }: AdminProductImagesProps) {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
@@ -53,6 +55,7 @@ export function AdminProductImages({
         }
       }
       router.refresh();
+      if (onImagesChange) onImagesChange();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Görsel yükleme hatası oluştu.");
     } finally {
@@ -93,6 +96,7 @@ export function AdminProductImages({
       }
 
       router.refresh();
+      if (onImagesChange) onImagesChange();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Silme işlemi başarısız.");
     } finally {
@@ -115,6 +119,7 @@ export function AdminProductImages({
       }
 
       router.refresh();
+      if (onImagesChange) onImagesChange();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Kapak görseli ayarlanırken hata oluştu.");
     } finally {
@@ -152,6 +157,7 @@ export function AdminProductImages({
       }
 
       router.refresh();
+      if (onImagesChange) onImagesChange();
     } catch (err) {
       setError(err instanceof Error ? err.message : "Sıralama kaydedilirken hata oluştu.");
     } finally {

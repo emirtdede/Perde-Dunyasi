@@ -4,6 +4,8 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import type { Announcement } from "@/src/types";
 
+import Image from "next/image";
+
 type AdminAnnouncementManagerProps = {
   announcements: Announcement[];
 };
@@ -11,6 +13,8 @@ type AdminAnnouncementManagerProps = {
 const initialForm = {
   title: "",
   content: "",
+  imageUrl: "",
+  storagePath: "",
   isPublished: true,
 };
 
@@ -20,6 +24,7 @@ export function AdminAnnouncementManager({
   const router = useRouter();
   const [selectedId, setSelectedId] = useState<string | null>(announcements[0]?.id ?? null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isUploading, setIsUploading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,6 +37,8 @@ export function AdminAnnouncementManager({
     ...initialForm,
     title: selectedAnnouncement?.title ?? "",
     content: selectedAnnouncement?.content ?? "",
+    imageUrl: selectedAnnouncement?.imageUrl ?? "",
+    storagePath: selectedAnnouncement?.storagePath ?? "",
     isPublished: selectedAnnouncement?.isPublished ?? true,
   }));
 
@@ -43,6 +50,8 @@ export function AdminAnnouncementManager({
       ...initialForm,
       title: selectedAnnouncement?.title ?? "",
       content: selectedAnnouncement?.content ?? "",
+      imageUrl: selectedAnnouncement?.imageUrl ?? "",
+      storagePath: selectedAnnouncement?.storagePath ?? "",
       isPublished: selectedAnnouncement?.isPublished ?? true,
     });
     setMessage(null);
@@ -51,6 +60,52 @@ export function AdminAnnouncementManager({
 
   function handleSelect(announcement: Announcement) {
     setSelectedId(announcement.id);
+  }
+
+  async function handleImageUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    if (!e.target.files || e.target.files.length === 0) return;
+    const file = e.target.files[0];
+    if (!file.type.startsWith("image/")) {
+      setError("Lütfen geçerli bir görsel dosyası seçin.");
+      return;
+    }
+
+    setIsUploading(true);
+    setError(null);
+    try {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("folder", "announcements");
+
+      const response = await fetch("/api/admin/upload", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+      if (!response.ok) {
+        throw new Error(result.error || "Görsel yüklenemedi.");
+      }
+
+      setForm((current) => ({
+        ...current,
+        imageUrl: result.url,
+        storagePath: result.storagePath,
+      }));
+      setMessage("Görsel başarıyla yüklendi. Kaydet butonuna basarak kaydedebilirsiniz.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Yükleme sırasında bir hata oluştu");
+    } finally {
+      setIsUploading(false);
+    }
+  }
+
+  function handleRemoveImage() {
+    setForm((current) => ({
+      ...current,
+      imageUrl: "",
+      storagePath: "",
+    }));
   }
 
   async function handleSubmit(event: React.FormEvent) {
@@ -166,11 +221,24 @@ export function AdminAnnouncementManager({
                   : "border-[var(--card-border)] hover:bg-black/5 dark:hover:bg-white/5"
               }`}
             >
-              <div>
-                <p className="font-medium">{announcement.title}</p>
-                <p className="text-sm text-[var(--muted)]">
-                  {announcement.isPublished ? "Yayınlanmış" : "Taslak"}
-                </p>
+              <div className="flex items-center gap-3">
+                {announcement.imageUrl && (
+                  <div className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-black/5 dark:bg-white/5">
+                    <Image
+                      src={announcement.imageUrl}
+                      alt={announcement.title}
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                )}
+                <div>
+                  <p className="font-medium">{announcement.title}</p>
+                  <p className="text-sm text-[var(--muted)]">
+                    {announcement.isPublished ? "Yayınlanmış" : "Taslak"}
+                  </p>
+                </div>
               </div>
               <div className="text-right text-sm text-[var(--muted)]">
                 <p>{announcement.isPublished ? "Aktif" : "Pasif"}</p>
@@ -234,6 +302,60 @@ export function AdminAnnouncementManager({
               />
             </label>
 
+            {/* Image upload area */}
+            <div className="block">
+              <span className="mb-2 block text-sm font-medium">Görsel (İsteğe bağlı)</span>
+              {form.imageUrl ? (
+                <div className="relative flex items-center gap-4 rounded-2xl border border-[var(--card-border)] p-3 bg-black/5 dark:bg-white/5">
+                  <div className="relative h-20 w-20 overflow-hidden rounded-xl bg-black/10">
+                    <Image
+                      src={form.imageUrl}
+                      alt="Duyuru görseli"
+                      fill
+                      className="object-cover"
+                      unoptimized
+                    />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-xs text-[var(--muted)] truncate max-w-[180px]">
+                      {form.imageUrl}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleRemoveImage}
+                      className="text-xs font-semibold text-rose-500 hover:underline text-left"
+                    >
+                      Görseli Kaldır
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex items-center justify-center w-full">
+                  <label className="flex flex-col items-center justify-center w-full h-32 border-2 border-dashed border-[var(--card-border)] rounded-2xl cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition">
+                    <div className="flex flex-col items-center justify-center pt-5 pb-6">
+                      <svg className="w-8 h-8 mb-3 text-[var(--muted)]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                      </svg>
+                      <p className="mb-1 text-sm text-[var(--muted)]">
+                        <span className="font-semibold">Görsel yükleyin</span> veya sürükleyin
+                      </p>
+                      <p className="text-xs text-[var(--muted)]">WebP formatına dönüştürülecektir</p>
+                    </div>
+                    <input
+                      type="file"
+                      className="hidden"
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                      disabled={isUploading || isLoading}
+                    />
+                  </label>
+                </div>
+              )}
+              {isUploading && (
+                <p className="mt-2 text-xs text-[var(--accent)] animate-pulse">Görsel yükleniyor, lütfen bekleyin...</p>
+              )}
+            </div>
+
             <label className="inline-flex items-center gap-2 text-sm cursor-pointer select-none">
               <input
                 type="checkbox"
@@ -265,7 +387,7 @@ export function AdminAnnouncementManager({
           </div>
           <button
             type="submit"
-            disabled={isLoading}
+            disabled={isLoading || isUploading}
             className="rounded-full bg-[var(--accent)] text-[var(--accent-foreground)] px-6 py-2.5 text-sm font-medium transition hover:opacity-90 disabled:opacity-50"
           >
             {isLoading ? "Kaydediliyor..." : "Kaydet"}

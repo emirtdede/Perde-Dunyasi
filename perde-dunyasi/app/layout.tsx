@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/src/components/footer";
 import { Header } from "@/src/components/header";
@@ -7,15 +6,7 @@ import { ThemeProvider } from "@/src/components/theme-provider";
 import { getSettings } from "@/src/lib/supabase/db";
 import { AnalyticsTracker } from "@/src/components/analytics-tracker";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// System fonts fallback used to avoid next/font/google Turbo compiler resolution errors in Windows environment
 
 export const metadata: Metadata = {
   title: "Perde Dünyası",
@@ -38,7 +29,7 @@ export default async function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className="h-full antialiased"
       suppressHydrationWarning
     >
       <head>

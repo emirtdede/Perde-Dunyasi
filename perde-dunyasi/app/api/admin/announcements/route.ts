@@ -20,6 +20,8 @@ export async function POST(request: NextRequest) {
     const announcement = await createAnnouncement({
       title: body.title,
       content: body.content,
+      imageUrl: body.imageUrl || null,
+      storagePath: body.storagePath || null,
       isPublished: body.isPublished === true,
     });
 

@@ -18,6 +18,7 @@ export async function POST(request: NextRequest) {
     }
 
     const product = await createProduct({
+      id: body.id || undefined,
       categoryId: body.categoryId,
       name: body.name,
       slug: body.slug,

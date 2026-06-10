@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import type { Category, Product } from "@/src/types";
+import type { Category, Product, ProductImage } from "@/src/types";
 import { AdminProductImages } from "./admin-product-images";
 
 type AdminProductManagerProps = {
@@ -44,7 +44,14 @@ export function AdminProductManager({
   products,
 }: AdminProductManagerProps) {
   const router = useRouter();
+  
+  // Track if we are editing an existing product or creating a new one with a temp UUID
   const [selectedId, setSelectedId] = useState<string | null>(products[0]?.id ?? null);
+  const [tempId, setTempId] = useState<string | null>(null);
+  
+  // Track images dynamically uploaded for a new unsaved product
+  const [tempImages, setTempImages] = useState<ProductImage[]>([]);
+
   const [isSlugManual, setIsSlugManual] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -54,6 +61,9 @@ export function AdminProductManager({
     () => products.find((product) => product.id === selectedId) ?? null,
     [products, selectedId],
   );
+
+  // Active product ID for uploading images
+  const activeProductId = selectedId || tempId || "";
 
   const [form, setForm] = useState(() => ({
     ...initialForm,
@@ -84,6 +94,8 @@ export function AdminProductManager({
       isFeatured: selectedProduct?.isFeatured ?? false,
       sortOrder: selectedProduct?.sortOrder?.toString() ?? "0",
     });
+    setTempId(null);
+    setTempImages([]);
     setIsSlugManual(!!selectedProduct);
     setMessage(null);
     setError(null);
@@ -91,6 +103,20 @@ export function AdminProductManager({
 
   function handleSelect(product: Product) {
     setSelectedId(product.id);
+  }
+
+  function handleStartNewProduct() {
+    setSelectedId(null);
+    const newUUID = crypto.randomUUID();
+    setTempId(newUUID);
+    setTempImages([]);
+    setForm({
+      ...initialForm,
+      categoryId: categories[0]?.id ?? "",
+    });
+    setIsSlugManual(false);
+    setMessage(null);
+    setError(null);
   }
 
   function handleNameChange(val: string) {
@@ -125,10 +151,13 @@ export function AdminProductManager({
       
       const method = selectedId ? "PUT" : "POST";
 
+      // Include the generated UUID for new products
+      const payload = selectedId ? form : { ...form, id: tempId };
+
       const response = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify(payload),
       });
 
       const result = await response.json();
@@ -143,6 +172,8 @@ export function AdminProductManager({
       
       if (!selectedId && result.product) {
         setSelectedId(result.product.id);
+        setTempId(null);
+        setTempImages([]);
       }
     } catch (err) {
       const errorMsg = err instanceof Error ? err.message : "Kaydetme sırasında bir hata oluştu";
@@ -219,6 +250,23 @@ export function AdminProductManager({
     }
   }
 
+  // Handle local updates to tempImages list when pre-creating
+  const handleTempImagesChange = () => {
+    // Refresh temporary uploaded list by calling custom fetch or router.refresh
+    if (tempId) {
+      fetch(`/api/admin/products/${tempId}/images`)
+        .then(res => res.json())
+        .then(data => {
+          if (Array.isArray(data)) {
+            setTempImages(data);
+          }
+        })
+        .catch(err => console.error("Error refreshing temp images:", err));
+    }
+  };
+
+  const currentImagesList = selectedProduct ? selectedProduct.images : tempImages;
+
   return (
     <div className="space-y-6">
       <section className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
@@ -231,9 +279,7 @@ export function AdminProductManager({
             </div>
             <button
               type="button"
-              onClick={() => {
-                setSelectedId(null);
-              }}
+              onClick={handleStartNewProduct}
               className="rounded-full border border-[var(--card-border)] px-4 py-2 text-sm font-medium transition hover:bg-black/5 dark:hover:bg-white/5"
             >
               Yeni ürün
@@ -473,8 +519,12 @@ export function AdminProductManager({
         </form>
       </section>
 
-      {selectedId && selectedProduct && (
-        <AdminProductImages productId={selectedId} images={selectedProduct.images} />
+      {activeProductId && (
+        <AdminProductImages 
+          productId={activeProductId} 
+          images={currentImagesList} 
+          onImagesChange={handleTempImagesChange}
+        />
       )}
     </div>
   );

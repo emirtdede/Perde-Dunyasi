@@ -118,7 +118,12 @@ export function AdminAnalyticsManager() {
           {/* Premium CSS-based Bar Chart */}
           {data.chartData.length > 0 ? (
             <div className="rounded-2xl border border-[var(--card-border)] p-6 space-y-4">
-              <h3 className="text-sm font-semibold">Zaman Serisi Analizi (Görüntülemeler)</h3>
+              <div>
+                <h3 className="text-sm font-semibold">Günlük Ziyaret Grafiği</h3>
+                <p className="text-xs text-[var(--muted)] mt-1">
+                  Seçilen tarih aralığındaki günlük toplam sayfa görüntüleme (sütun yüksekliği) ve tekil ziyaretçi sayıları.
+                </p>
+              </div>
               <div className="h-48 w-full flex items-end justify-between gap-1 pt-6 overflow-x-auto">
                 {data.chartData.map((d, index) => {
                   const heightPercentage = Math.round((d.pageViews / maxPageViews) * 100);

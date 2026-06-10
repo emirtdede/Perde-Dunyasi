@@ -24,6 +24,8 @@ export async function PUT(
     const updated = await updateAnnouncement(id, {
       title: body.title,
       content: body.content,
+      imageUrl: body.imageUrl,
+      storagePath: body.storagePath,
       isPublished: body.isPublished,
     });
 
