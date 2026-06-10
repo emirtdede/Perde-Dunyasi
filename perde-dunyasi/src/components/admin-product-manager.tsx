@@ -347,11 +347,15 @@ export function AdminProductManager({
                   onChange={(event) =>
                     setForm((current) => ({ ...current, categoryId: event.target.value }))
                   }
-                  className="w-full rounded-2xl border border-[var(--card-border)] bg-transparent px-4 py-3 text-sm outline-none focus:border-[var(--accent)]"
+                  className="w-full rounded-2xl border border-[var(--card-border)] bg-white dark:bg-zinc-900 text-[var(--foreground)] px-4 py-3 text-sm outline-none focus:border-[var(--accent)]"
                   disabled={isLoading}
                 >
                   {categories.map((category) => (
-                    <option key={category.id} value={category.id}>
+                    <option 
+                      key={category.id} 
+                      value={category.id} 
+                      className="bg-white dark:bg-zinc-900 text-slate-900 dark:text-white"
+                    >
                       {category.name}
                     </option>
                   ))}
