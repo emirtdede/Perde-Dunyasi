@@ -5,6 +5,7 @@ import { Footer } from "@/src/components/footer";
 import { Header } from "@/src/components/header";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import { getSettings } from "@/src/lib/supabase/db";
+import { AnalyticsTracker } from "@/src/components/analytics-tracker";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +51,7 @@ export default async function RootLayout({
       </head>
       <body className="min-h-full bg-[var(--background)] text-[var(--foreground)]" suppressHydrationWarning>
         <ThemeProvider>
+          <AnalyticsTracker />
           <div className="flex min-h-screen flex-col">
             <Header logoUrl={logoUrl} logoDarkUrl={logoDarkUrl} />
             <main className="flex-1">{children}</main>

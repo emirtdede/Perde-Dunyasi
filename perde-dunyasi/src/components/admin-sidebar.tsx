@@ -6,6 +6,8 @@ const items = [
   { href: "/admin/kategoriler", label: "Kategoriler" },
   { href: "/admin/kampanyalar", label: "Kampanyalar" },
   { href: "/admin/duyurular", label: "Duyurular" },
+  { href: "/admin/ziyaretciler", label: "Ziyaretçiler" },
+  { href: "/admin/depolama", label: "Depolama" },
   { href: "/admin/ayarlar", label: "Site Ayarları" },
 ];
 

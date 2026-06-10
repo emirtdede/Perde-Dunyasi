@@ -206,6 +206,41 @@ export function AdminCategoryManager({ categories }: AdminCategoryManagerProps) 
     }
   }
 
+  async function handleMove(index: number, direction: "up" | "down") {
+    if (isLoading) return;
+    const newIndex = direction === "up" ? index - 1 : index + 1;
+    if (newIndex < 0 || newIndex >= categories.length) return;
+
+    const reordered = [...categories];
+    const temp = reordered[index];
+    reordered[index] = reordered[newIndex];
+    reordered[newIndex] = temp;
+
+    const payload = reordered.map((cat, idx) => ({
+      id: cat.id,
+      sortOrder: idx + 1,
+    }));
+
+    setIsLoading(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/admin/categories/reorder", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orders: payload }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || "Sıralama güncellenemedi");
+      }
+      router.refresh();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Sıralama güncellenirken bir hata oluştu");
+    } finally {
+      setIsLoading(false);
+    }
+  }
+
   return (
     <section className="grid gap-6 xl:grid-cols-[1.1fr_0.9fr]">
       {/* Category List */}
@@ -227,26 +262,48 @@ export function AdminCategoryManager({ categories }: AdminCategoryManagerProps) 
         </div>
 
         <div className="mt-5 space-y-3">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              type="button"
-              onClick={() => handleSelect(category)}
-              className={`flex w-full items-center justify-between rounded-2xl border px-4 py-4 text-left transition ${
-                selectedId === category.id
-                  ? "border-[var(--accent)] bg-[var(--accent)]/10"
-                  : "border-[var(--card-border)] hover:bg-black/5 dark:hover:bg-white/5"
-              }`}
-            >
-              <div>
-                <p className="font-medium">{category.name}</p>
-                <p className="text-sm text-[var(--muted)]">{category.slug}</p>
+          {categories.map((category, index) => (
+            <div key={category.id} className="flex gap-2 w-full group/item">
+              <button
+                type="button"
+                onClick={() => handleSelect(category)}
+                className={`flex-1 flex items-center justify-between rounded-2xl border px-4 py-4 text-left transition ${
+                  selectedId === category.id
+                    ? "border-[var(--accent)] bg-[var(--accent)]/10"
+                    : "border-[var(--card-border)] hover:bg-black/5 dark:hover:bg-white/5"
+                }`}
+              >
+                <div>
+                  <p className="font-medium">{category.name}</p>
+                  <p className="text-sm text-[var(--muted)]">{category.slug}</p>
+                </div>
+                <div className="text-right text-sm text-[var(--muted)] mr-2">
+                  <p>{category.isActive ? "Aktif" : "Pasif"}</p>
+                  <p>Sıra {category.sortOrder}</p>
+                </div>
+              </button>
+              
+              <div className="flex flex-col gap-1 justify-center shrink-0">
+                <button
+                  type="button"
+                  disabled={index === 0 || isLoading}
+                  onClick={() => handleMove(index, "up")}
+                  title="Yukarı Taşı"
+                  className="p-1.5 rounded-lg border border-[var(--card-border)] hover:bg-black/5 dark:hover:bg-white/5 disabled:opacity-30 disabled:pointer-events-none transition text-xs font-semibold"
+                >
+                  ▲
+                </button>
+                <button
+                  type="button"
+                  disabled={index === categories.length - 1 || isLoading}
+                  onClick={() => handleMove(index, "down")}
+                  title="Aşağı Taşı"
+                  className="p-1.5 rounded-lg border border-[var(--card-border)] hover:bg-black/5 dark:hover:bg-white/5 disabled:opacity-30 disabled:pointer-events-none transition text-xs font-semibold"
+                >
+                  ▼
+                </button>
               </div>
-              <div className="text-right text-sm text-[var(--muted)]">
-                <p>{category.isActive ? "Aktif" : "Pasif"}</p>
-                <p>Sıra {category.sortOrder}</p>
-              </div>
-            </button>
+            </div>
           ))}
           {categories.length === 0 && (
             <p className="text-sm text-[var(--muted)] text-center py-4">Kategori bulunamadı.</p>

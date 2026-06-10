@@ -187,3 +187,25 @@ INSERT INTO site_settings (key, value) VALUES
 ('meta_title', 'Perde Dünyası'),
 ('meta_description', 'Perde, tül, stor ve jaluzi ürünleri için vitrin sitesi.')
 ON CONFLICT (key) DO NOTHING;
+
+-- 7. visits Table (Analytics)
+CREATE TABLE IF NOT EXISTS visits (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  visitor_id VARCHAR(100) NOT NULL,
+  path VARCHAR(255) NOT NULL,
+  referrer VARCHAR(255),
+  ip_address VARCHAR(45),
+  country VARCHAR(100) DEFAULT 'Bilinmiyor',
+  city VARCHAR(100) DEFAULT 'Bilinmiyor',
+  user_agent TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+-- Enable RLS
+ALTER TABLE visits ENABLE ROW LEVEL SECURITY;
+
+-- Policies
+CREATE POLICY "Public can insert visits" ON visits FOR INSERT WITH CHECK (true);
+CREATE POLICY "Admin full access visits" ON visits FOR SELECT TO authenticated USING (true);
+CREATE POLICY "Admin full access visits all" ON visits FOR ALL TO authenticated USING (true);
+

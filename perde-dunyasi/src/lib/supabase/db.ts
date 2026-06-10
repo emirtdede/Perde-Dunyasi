@@ -33,6 +33,7 @@ interface LocalDB {
   announcements: Announcement[];
   settings: Record<string, string | null>;
   productImages: ProductImage[];
+  visits: any[];
 }
 
 function getDefaultDB(): LocalDB {
@@ -43,6 +44,7 @@ function getDefaultDB(): LocalDB {
     announcements: [...mockAnnouncements],
     settings: { ...mockSettings },
     productImages: [],
+    visits: [],
   };
 }
 
@@ -80,6 +82,7 @@ function get_localCampaigns(): Campaign[] { return readLocalDB().campaigns; }
 function get_localAnnouncements(): Announcement[] { return readLocalDB().announcements; }
 function get_localSettings(): Record<string, string | null> { return readLocalDB().settings; }
 function get_localProductImages(): ProductImage[] { return readLocalDB().productImages; }
+function get_localVisits(): any[] { return readLocalDB().visits || []; }
 
 // --- Setter helpers (read-modify-write to disk) ---
 function set_localCategories(val: Category[]) { const db = readLocalDB(); db.categories = val; writeLocalDB(db); }
@@ -88,6 +91,7 @@ function set_localCampaigns(val: Campaign[]) { const db = readLocalDB(); db.camp
 function set_localAnnouncements(val: Announcement[]) { const db = readLocalDB(); db.announcements = val; writeLocalDB(db); }
 function set_localSettings(val: Record<string, string | null>) { const db = readLocalDB(); db.settings = val; writeLocalDB(db); }
 function set_localProductImages(val: ProductImage[]) { const db = readLocalDB(); db.productImages = val; writeLocalDB(db); }
+function set_localVisits(val: any[]) { const db = readLocalDB(); db.visits = val; writeLocalDB(db); }
 
 // --- Property-style accessors for backward compatibility ---
 // JavaScript trick: use a module-level object with getters/setters
@@ -99,6 +103,7 @@ const _db = {} as {
   localAnnouncements: Announcement[];
   localSettings: Record<string, string | null>;
   localProductImages: ProductImage[];
+  localVisits: any[];
 };
 
 Object.defineProperty(_db, "localCategories", { get: get_localCategories, set: set_localCategories });
@@ -107,6 +112,7 @@ Object.defineProperty(_db, "localCampaigns", { get: get_localCampaigns, set: set
 Object.defineProperty(_db, "localAnnouncements", { get: get_localAnnouncements, set: set_localAnnouncements });
 Object.defineProperty(_db, "localSettings", { get: get_localSettings, set: set_localSettings });
 Object.defineProperty(_db, "localProductImages", { get: get_localProductImages, set: set_localProductImages });
+Object.defineProperty(_db, "localVisits", { get: get_localVisits, set: set_localVisits });
 
 // All references below use _db.localXxx to read/write through the file-based DB
 
@@ -1359,4 +1365,333 @@ export async function updateSettings(settings: Record<string, string | null>): P
     ...settings,
   };
   return true;
+}
+
+// ==========================================
+// REORDERING SERVICES
+// ==========================================
+
+export async function reorderCategories(orders: { id: string; sortOrder: number }[]): Promise<boolean> {
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      for (const item of orders) {
+        const { error } = await supabase
+          .from("categories")
+          .update({ sort_order: item.sortOrder })
+          .eq("id", item.id);
+        if (error) throw error;
+      }
+      return true;
+    } catch (err) {
+      console.error("Supabase reorderCategories error, falling back to mock:", err);
+    }
+  }
+
+  const list = [..._db.localCategories];
+  orders.forEach(item => {
+    const found = list.find(c => c.id === item.id);
+    if (found) found.sortOrder = item.sortOrder;
+  });
+  _db.localCategories = list;
+  return true;
+}
+
+export async function reorderProducts(orders: { id: string; sortOrder: number }[]): Promise<boolean> {
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      for (const item of orders) {
+        const { error } = await supabase
+          .from("products")
+          .update({ sort_order: item.sortOrder })
+          .eq("id", item.id);
+        if (error) throw error;
+      }
+      return true;
+    } catch (err) {
+      console.error("Supabase reorderProducts error, falling back to mock:", err);
+    }
+  }
+
+  const list = [..._db.localProducts];
+  orders.forEach(item => {
+    const found = list.find(p => p.id === item.id);
+    if (found) found.sortOrder = item.sortOrder;
+  });
+  _db.localProducts = list;
+  return true;
+}
+
+export async function reorderCampaigns(orders: { id: string; sortOrder: number }[]): Promise<boolean> {
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      for (const item of orders) {
+        const { error } = await supabase
+          .from("campaigns")
+          .update({ sort_order: item.sortOrder })
+          .eq("id", item.id);
+        if (error) throw error;
+      }
+      return true;
+    } catch (err) {
+      console.error("Supabase reorderCampaigns error, falling back to mock:", err);
+    }
+  }
+
+  const list = [..._db.localCampaigns];
+  orders.forEach(item => {
+    const found = list.find(c => c.id === item.id);
+    if (found) found.sortOrder = item.sortOrder;
+  });
+  _db.localCampaigns = list;
+  return true;
+}
+
+// ==========================================
+// ANALYTICS (VISITS) SERVICES
+// ==========================================
+
+export async function recordVisit(visit: {
+  visitorId: string;
+  path: string;
+  referrer: string | null;
+  ipAddress: string | null;
+  country: string;
+  city: string;
+  userAgent: string | null;
+}): Promise<boolean> {
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      const { error } = await supabase.from("visits").insert({
+        visitor_id: visit.visitorId,
+        path: visit.path,
+        referrer: visit.referrer,
+        ip_address: visit.ipAddress,
+        country: visit.country,
+        city: visit.city,
+        user_agent: visit.userAgent,
+      });
+      if (error) throw error;
+      return true;
+    } catch (err) {
+      console.error("Supabase recordVisit error, falling back to mock:", err);
+    }
+  }
+
+  const list = _db.localVisits;
+  list.push({
+    id: generateUUID(),
+    visitor_id: visit.visitorId,
+    path: visit.path,
+    referrer: visit.referrer,
+    ip_address: visit.ipAddress,
+    country: visit.country,
+    city: visit.city,
+    user_agent: visit.userAgent,
+    created_at: new Date().toISOString(),
+  });
+  _db.localVisits = list;
+  return true;
+}
+
+export async function getVisitStats(filter: "day" | "month" | "year"): Promise<{
+  totalPageViews: number;
+  uniqueVisitors: number;
+  topPaths: { path: string; count: number }[];
+  topLocations: { country: string; city: string; count: number }[];
+  chartData: { date: string; pageViews: number; uniqueVisitors: number }[];
+}> {
+  let visitsList: any[] = [];
+
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      let filterDate = new Date();
+      if (filter === "day") {
+        filterDate.setDate(filterDate.getDate() - 1);
+      } else if (filter === "month") {
+        filterDate.setMonth(filterDate.getMonth() - 1);
+      } else {
+        filterDate.setFullYear(filterDate.getFullYear() - 1);
+      }
+
+      const { data, error } = await supabase
+        .from("visits")
+        .select("*")
+        .gte("created_at", filterDate.toISOString())
+        .order("created_at", { ascending: true });
+
+      if (error) throw error;
+      visitsList = data || [];
+    } catch (err) {
+      console.error("Supabase getVisitStats error, falling back to mock:", err);
+      visitsList = _db.localVisits;
+    }
+  } else {
+    // Local fallback filtering
+    let filterDate = new Date();
+    if (filter === "day") {
+      filterDate.setDate(filterDate.getDate() - 1);
+    } else if (filter === "month") {
+      filterDate.setMonth(filterDate.getMonth() - 1);
+    } else {
+      filterDate.setFullYear(filterDate.getFullYear() - 1);
+    }
+    
+    visitsList = _db.localVisits.filter(
+      v => new Date(v.created_at) >= filterDate
+    );
+  }
+
+  // Calculate metrics
+  const totalPageViews = visitsList.length;
+  const uniqueVisitors = new Set(visitsList.map(v => v.visitor_id)).size;
+
+  // Top paths
+  const pathCounts: Record<string, number> = {};
+  visitsList.forEach(v => {
+    pathCounts[v.path] = (pathCounts[v.path] || 0) + 1;
+  });
+  const topPaths = Object.entries(pathCounts)
+    .map(([path, count]) => ({ path, count }))
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  // Top locations
+  const locationCounts: Record<string, number> = {};
+  visitsList.forEach(v => {
+    const locKey = `${v.country || "Bilinmiyor"} - ${v.city || "Bilinmiyor"}`;
+    locationCounts[locKey] = (locationCounts[locKey] || 0) + 1;
+  });
+  const topLocations = Object.entries(locationCounts)
+    .map(([loc, count]) => {
+      const parts = loc.split(" - ");
+      return { country: parts[0], city: parts[1], count };
+    })
+    .sort((a, b) => b.count - a.count)
+    .slice(0, 10);
+
+  // Group visits for chart data
+  const chartGroup: Record<string, { pageViews: number; uniq: Set<string> }> = {};
+  visitsList.forEach(v => {
+    const dateStr = new Date(v.created_at).toLocaleDateString("tr-TR", {
+      day: "2-digit",
+      month: "2-digit",
+    });
+    if (!chartGroup[dateStr]) {
+      chartGroup[dateStr] = { pageViews: 0, uniq: new Set() };
+    }
+    chartGroup[dateStr].pageViews += 1;
+    chartGroup[dateStr].uniq.add(v.visitor_id);
+  });
+
+  const chartData = Object.entries(chartGroup).map(([date, data]) => ({
+    date,
+    pageViews: data.pageViews,
+    uniqueVisitors: data.uniq.size,
+  }));
+
+  return {
+    totalPageViews,
+    uniqueVisitors,
+    topPaths,
+    topLocations,
+    chartData,
+  };
+}
+
+export async function getStorageStats(): Promise<{
+  codeSizeMb: number;
+  mediaSizeMb: number;
+  totalSizeMb: number;
+}> {
+  // 1. Calculate project files size (codeSize) on disk
+  let codeSize = 0;
+  try {
+    const projectDir = process.cwd();
+    
+    // Simple helper to recursively sum file sizes of important dirs (.next, app, src, public etc.)
+    const getDirSize = (dirPath: string): number => {
+      let size = 0;
+      if (!fs.existsSync(dirPath)) return 0;
+      const stats = fs.statSync(dirPath);
+      if (stats.isFile()) {
+        return stats.size;
+      } else if (stats.isDirectory()) {
+        // Skip node_modules for clean calculation of code/build size
+        if (dirPath.includes("node_modules") || dirPath.includes(".git")) return 0;
+        try {
+          const files = fs.readdirSync(dirPath);
+          files.forEach(f => {
+            size += getDirSize(path.join(dirPath, f));
+          });
+        } catch (e) { /* ignore read errors */ }
+      }
+      return size;
+    };
+    
+    codeSize = getDirSize(projectDir);
+  } catch (err) {
+    console.error("Error calculating code size:", err);
+  }
+
+  // 2. Calculate Supabase storage size or local uploads folder size
+  let mediaSize = 0;
+  if (isSupabaseConfigured) {
+    try {
+      const supabase = createSupabaseServerClient();
+      
+      // Fetch list of files in storage recursively (limited up to 1000 items)
+      // Since it's a small-scale catalog showcase app, 1000 is more than enough.
+      const folders = ["products", "settings", "general", "categories", "campaigns"];
+      for (const folder of folders) {
+        const { data, error } = await supabase.storage.from("product-images").list(folder, {
+          limit: 1000,
+        });
+        if (!error && data) {
+          data.forEach(item => {
+            if (item.metadata && item.metadata.size) {
+              mediaSize += item.metadata.size;
+            }
+          });
+        }
+      }
+    } catch (err) {
+      console.error("Error fetching Supabase storage size:", err);
+    }
+  } else {
+    // Local uploads size
+    try {
+      const uploadsDir = path.join(process.cwd(), "public", "uploads");
+      const getUploadsSize = (dirPath: string): number => {
+        let size = 0;
+        if (!fs.existsSync(dirPath)) return 0;
+        const stats = fs.statSync(dirPath);
+        if (stats.isFile()) {
+          return stats.size;
+        } else if (stats.isDirectory()) {
+          const files = fs.readdirSync(dirPath);
+          files.forEach(f => {
+            size += getUploadsSize(path.join(dirPath, f));
+          });
+        }
+        return size;
+      };
+      mediaSize = getUploadsSize(uploadsDir);
+    } catch (err) {
+      console.error("Error calculating local uploads size:", err);
+    }
+  }
+
+  const codeSizeMb = Number((codeSize / (1024 * 1024)).toFixed(2));
+  const mediaSizeMb = Number((mediaSize / (1024 * 1024)).toFixed(2));
+  
+  return {
+    codeSizeMb,
+    mediaSizeMb,
+    totalSizeMb: Number((codeSizeMb + mediaSizeMb).toFixed(2)),
+  };
 }
