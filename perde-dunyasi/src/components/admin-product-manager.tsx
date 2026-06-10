@@ -45,9 +45,9 @@ export function AdminProductManager({
 }: AdminProductManagerProps) {
   const router = useRouter();
   
-  // Track if we are editing an existing product or creating a new one with a temp UUID
-  const [selectedId, setSelectedId] = useState<string | null>(products[0]?.id ?? null);
-  const [tempId, setTempId] = useState<string | null>(null);
+  // Start in "create new" mode by default with a pre-generated tempId so the image editor is immediately available
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [tempId, setTempId] = useState<string | null>(() => crypto.randomUUID());
   
   // Track images dynamically uploaded for a new unsaved product
   const [tempImages, setTempImages] = useState<ProductImage[]>([]);
@@ -94,7 +94,11 @@ export function AdminProductManager({
       isFeatured: selectedProduct?.isFeatured ?? false,
       sortOrder: selectedProduct?.sortOrder?.toString() ?? "0",
     });
-    setTempId(null);
+    if (selectedId === null) {
+      setTempId(crypto.randomUUID());
+    } else {
+      setTempId(null);
+    }
     setTempImages([]);
     setIsSlugManual(!!selectedProduct);
     setMessage(null);
@@ -107,16 +111,6 @@ export function AdminProductManager({
 
   function handleStartNewProduct() {
     setSelectedId(null);
-    const newUUID = crypto.randomUUID();
-    setTempId(newUUID);
-    setTempImages([]);
-    setForm({
-      ...initialForm,
-      categoryId: categories[0]?.id ?? "",
-    });
-    setIsSlugManual(false);
-    setMessage(null);
-    setError(null);
   }
 
   function handleNameChange(val: string) {
