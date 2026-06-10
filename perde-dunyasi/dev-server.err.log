@@ -1,0 +1,2559 @@
+⚠ Blocked cross-origin request to Next.js dev resource /_next/webpack-hmr from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[browser] Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/DEDE-/Desktop/perdedunyası/perde-dunyasi/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477:13)
+[browser] Image with src "http://localhost:3000/vercel.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio. (file://C:/Users/DEDE-/Desktop/perdedunyası/perde-dunyasi/.next/dev/static/chunks/node_modules_next_dist_1ybzpk2._.js:2477:13)
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import "./globals.css";
+> 4 | import { Footer } from "@/src/components/footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Header } from "@/src/components/header";
+  6 | import { ThemeProvider } from "@/src/components/theme-provider";
+  7 |
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:6:1
+Module not found: Can't resolve '@/src/components/theme-provider'
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+[31m[1m>[0m [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+  [90m9 |[0m   variable: [32m"--font-geist-sans"[0m,
+
+Import map: aliased to relative './src/components/theme-provider' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import "./globals.css";
+> 4 | import { Footer } from "@/src/components/footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Header } from "@/src/components/header";
+  6 | import { ThemeProvider } from "@/src/components/theme-provider";
+  7 |
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:5:1
+Module not found: Can't resolve '@/src/components/header'
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+  [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mconst[0m geistSans = [33mGeist[0m({
+
+Import map: aliased to relative './src/components/header' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  [90m2 |[0m [36mimport[0m { [33mGeist[0m, [33mGeist_Mono[0m } [36mfrom[0m [32m"next/font/google"[0m;
+  [90m3 |[0m [36mimport[0m [32m"./globals.css"[0m;
+[31m[1m>[0m [90m4 |[0m [36mimport[0m { [33mFooter[0m } [36mfrom[0m [32m"@/src/components/footer"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m5 |[0m [36mimport[0m { [33mHeader[0m } [36mfrom[0m [32m"@/src/components/header"[0m;
+  [90m6 |[0m [36mimport[0m { [33mThemeProvider[0m } [36mfrom[0m [32m"@/src/components/theme-provider"[0m;
+  [90m7 |[0m
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./app/layout.tsx:4:1
+Module not found: Can't resolve '@/src/components/footer'
+  2 | import { Geist, Geist_Mono } from "next/font/google";
+  3 | import "./globals.css";
+> 4 | import { Footer } from "@/src/components/footer";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import { Header } from "@/src/components/header";
+  6 | import { ThemeProvider } from "@/src/components/theme-provider";
+  7 |
+
+Import map: aliased to relative './src/components/footer' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./app/layout.tsx:4:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+⚠ Blocked cross-origin request to Next.js dev resource /__nextjs_original-stack-frames from "127.0.0.1".
+Cross-origin access to Next.js dev resources is blocked by default for safety.
+
+To allow this host in development, add it to "allowedDevOrigins" in next.config.js and restart the dev server:
+
+// next.config.js
+module.exports = {
+  allowedDevOrigins: ['127.0.0.1'],
+}
+
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+⚠ Fast Refresh had to perform a full reload when ./src/components/theme-provider.tsx changed. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
