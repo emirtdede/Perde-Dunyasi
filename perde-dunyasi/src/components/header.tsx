@@ -6,62 +6,22 @@ import Image from "next/image";
 import { ThemeToggle } from "@/src/components/theme-toggle";
 import { useTheme } from "@/src/components/theme-provider";
 
-const navItemsDict = {
-  tr: [
-    { href: "/", label: "Ana Sayfa" },
-    { href: "/katalog", label: "Katalog" },
-    { href: "/urunler", label: "Ürünler" },
-    { href: "/kampanyalar", label: "Kampanyalar" },
-    { href: "/duyurular", label: "Duyurular" },
-    { href: "/hakkimizda", label: "Hakkımızda" },
-    { href: "/iletisim", label: "İletişim" },
-  ],
-  en: [
-    { href: "/", label: "Home" },
-    { href: "/katalog", label: "Catalog" },
-    { href: "/urunler", label: "Products" },
-    { href: "/kampanyalar", label: "Campaigns" },
-    { href: "/duyurular", label: "Announcements" },
-    { href: "/hakkimizda", label: "About Us" },
-    { href: "/iletisim", label: "Contact" },
-  ],
-};
+const navItems = [
+  { href: "/", label: "Ana Sayfa" },
+  { href: "/katalog", label: "Katalog" },
+  { href: "/urunler", label: "Ürünler" },
+  { href: "/kampanyalar", label: "Kampanyalar" },
+  { href: "/duyurular", label: "Duyurular" },
+  { href: "/hakkimizda", label: "Hakkımızda" },
+  { href: "/iletisim", label: "İletişim" },
+];
 
-const brandSubtitles = {
-  tr: "WhatsApp teklif vitrini",
-  en: "WhatsApp quote showcase",
-};
-
-const adminPanelLabels = {
-  tr: "Yönetim Paneli",
-  en: "Admin Panel",
-};
-
-export function Header({
-  logoUrl,
-  logoDarkUrl,
-  lang = "tr",
-}: {
-  logoUrl?: string | null;
-  logoDarkUrl?: string | null;
-  lang?: string;
-}) {
+export function Header({ logoUrl, logoDarkUrl }: { logoUrl?: string | null; logoDarkUrl?: string | null }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { theme } = useTheme();
   
-  const activeLang = lang === "en" ? "en" : "tr";
-  const navItems = navItemsDict[activeLang];
-  const brandSubtitle = brandSubtitles[activeLang];
-  const adminLabel = adminPanelLabels[activeLang];
-
   // Use logoDarkUrl in dark mode, fallback to logoUrl if dark logo is not uploaded
   const activeLogoUrl = theme === "dark" ? (logoDarkUrl || logoUrl) : logoUrl;
-
-  const toggleLanguage = () => {
-    const nextLang = activeLang === "tr" ? "en" : "tr";
-    document.cookie = `lang=${nextLang}; path=/; max-age=31536000`;
-    window.location.reload();
-  };
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--card-border)] bg-[color-mix(in_srgb,var(--background)_82%,transparent)] backdrop-blur-xl">
@@ -84,7 +44,7 @@ export function Header({
               <span className="text-xs uppercase tracking-[0.35em] text-[var(--muted)]">
                 Perde Dünyası
               </span>
-              <span className="text-sm font-medium">{brandSubtitle}</span>
+              <span className="text-sm font-medium">WhatsApp teklif vitrini</span>
             </div>
           )}
         </Link>
@@ -104,15 +64,6 @@ export function Header({
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Language Toggle */}
-          <button
-            onClick={toggleLanguage}
-            className="flex h-9 px-3 items-center justify-center rounded-xl border border-[var(--card-border)] text-xs font-semibold uppercase transition hover:bg-black/5 dark:hover:bg-white/5 tracking-wider"
-            title={activeLang === "tr" ? "Switch to English" : "Türkçe'ye geç"}
-          >
-            {activeLang === "tr" ? "EN" : "TR"}
-          </button>
-
           <ThemeToggle />
 
           {/* Hamburger button */}
@@ -161,7 +112,7 @@ export function Header({
               onClick={() => setMobileOpen(false)}
               className="mt-2 rounded-xl border border-[var(--card-border)] px-4 py-3 text-center text-sm font-medium text-[var(--muted)] transition hover:text-[var(--foreground)]"
             >
-              {adminLabel}
+              Yönetim Paneli
             </Link>
           </nav>
         </div>
