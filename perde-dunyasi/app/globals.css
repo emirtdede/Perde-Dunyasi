@@ -199,3 +199,12 @@ a, button, input, select, textarea {
   transform-origin: bottom left;
 }
 
+/* Google Maps Dark Mode Styling */
+.map-iframe {
+  transition: filter 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dark .map-iframe {
+  filter: invert(90%) hue-rotate(180deg) brightness(0.85) contrast(1.2);
+}
+
+

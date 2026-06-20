@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-[var(--card-border)] bg-[var(--background)]">
-      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 sm:px-10 lg:grid-cols-3 lg:px-12 items-start">
+      <div className="mx-auto grid max-w-6xl gap-10 px-6 py-12 sm:grid-cols-2 sm:px-10 lg:grid-cols-4 lg:px-12 items-start">
         {/* Brand */}
         <div className="flex flex-col gap-4">
           <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--foreground)] opacity-90">
@@ -33,7 +33,7 @@ export function Footer() {
         </div>
 
         {/* Quick Links */}
-        <div className="flex flex-col gap-4 lg:pl-16">
+        <div className="flex flex-col gap-4 lg:pl-8">
           <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--foreground)] opacity-90">
             Hızlı Linkler
           </h3>
@@ -71,6 +71,26 @@ export function Footer() {
             </svg>
             WhatsApp ile İletişim
           </a>
+        </div>
+
+        {/* Map Location */}
+        <div className="flex flex-col gap-4 w-full">
+          <h3 className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--foreground)] opacity-90">
+            Mağaza Konumu
+          </h3>
+          <div className="relative h-40 w-full overflow-hidden rounded-xl border border-[var(--card-border)] shadow-sm bg-[var(--card)] hover:border-[var(--accent)] transition duration-300">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d197.07737510102345!2d38.623752663694326!3d37.78446175719392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1za2FodGEgc2HEn2zEsWsgb2NhxJ_EsQ!5e0!3m2!1str!2str!4v1781944670932!5m2!1str!2str"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="map-iframe absolute inset-0"
+              title="Perde Dünyası Harita Konumu"
+            />
+          </div>
         </div>
       </div>
 
