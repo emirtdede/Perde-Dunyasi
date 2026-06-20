@@ -15,6 +15,18 @@ const quickLinks = [
   { href: "/iletisim", label: "İletişim" },
 ];
 
+function extractIframeSrc(input: string | null | undefined): string {
+  if (!input) return "";
+  const trimmed = input.trim();
+  if (trimmed.startsWith("<iframe")) {
+    const match = trimmed.match(/src="([^"]+)"/);
+    if (match && match[1]) {
+      return match[1];
+    }
+  }
+  return trimmed;
+}
+
 export function Footer({ settings }: FooterProps) {
   const currentYear = new Date().getFullYear();
 
@@ -25,8 +37,7 @@ export function Footer({ settings }: FooterProps) {
   const whatsappNumber = settings?.whatsapp_number || "905551234567";
 
   // Map settings
-  const defaultTrMap = "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d197.07737510102345!2d38.623752663694326!3d37.78446175719392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1za2FodGEgc2HEn2zEsWsgb2NhxJ_EsQ!5e0!3m2!1str!2str!4v1781944670932!5m2!1str!2str";
-  const mapSrc = settings?.google_maps_url || defaultTrMap;
+  const mapSrc = extractIframeSrc(settings?.google_maps_url);
 
   return (
     <footer className="border-t border-[var(--card-border)] bg-[var(--background)]">
