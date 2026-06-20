@@ -5,6 +5,7 @@ import { Header } from "@/src/components/header";
 import { ThemeProvider } from "@/src/components/theme-provider";
 import { getSettings } from "@/src/lib/supabase/db";
 import { AnalyticsTracker } from "@/src/components/analytics-tracker";
+import { cookies } from "next/headers";
 
 // System fonts fallback used to avoid next/font/google Turbo compiler resolution errors in Windows environment
 
@@ -25,10 +26,13 @@ export default async function RootLayout({
   const settings = await getSettings();
   const logoUrl = settings?.logo_url;
   const logoDarkUrl = settings?.logo_dark_url;
+  
+  const cookieStore = await cookies();
+  const lang = cookieStore.get("lang")?.value || "tr";
 
   return (
     <html
-      lang="tr"
+      lang={lang}
       className="h-full antialiased"
       suppressHydrationWarning
     >
@@ -44,9 +48,9 @@ export default async function RootLayout({
         <ThemeProvider>
           <AnalyticsTracker />
           <div className="flex min-h-screen flex-col">
-            <Header logoUrl={logoUrl} logoDarkUrl={logoDarkUrl} />
+            <Header logoUrl={logoUrl} logoDarkUrl={logoDarkUrl} lang={lang} />
             <main className="flex-1">{children}</main>
-            <Footer />
+            <Footer lang={lang} settings={settings} />
           </div>
         </ThemeProvider>
       </body>

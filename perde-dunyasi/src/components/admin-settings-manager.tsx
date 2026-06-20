@@ -256,7 +256,7 @@ export function AdminSettingsManager({
                 <input
                   value={form.google_maps_url}
                   onChange={(e) => handleChange("google_maps_url", e.target.value)}
-                  placeholder="https://maps.google.com/..."
+                  placeholder="https://www.google.com/maps/embed?..."
                   className="w-full rounded-2xl border border-[var(--card-border)] bg-transparent px-4 py-3 text-sm outline-none focus:border-[var(--accent)]"
                   disabled={isLoading}
                 />
